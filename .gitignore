@@ -1,3 +1,5 @@
+#.history
+.history
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -160,3 +162,4 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+.history/pmpp-chapter-3/in-chapter-examples/color-to-grayscale/color_to_grayscale_20240703014350.cu
