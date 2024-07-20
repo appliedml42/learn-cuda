@@ -41,7 +41,7 @@ torch::Tensor matmul(torch::Tensor M, torch::Tensor N){
     auto P = torch::empty({M_rows, N_cols}, M.options());
 
     dim3 threads_per_block(16, 16);
-    dim3 num_of_blocks(cdiv(M_rows, threads_per_block.y), cdiv(N_cols, threads_per_block.x));
+    dim3 num_of_blocks(cdiv(N_cols, threads_per_block.x), cdiv(M_rows, threads_per_block.y));
 
     matmul_kernel<<<num_of_blocks, threads_per_block>>>(M.data_ptr<float>(), N.data_ptr<float>(), P.data_ptr<float>(), M_rows, M_cols, N_rows, N_cols);
 
